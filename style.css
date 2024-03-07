@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100%;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(0, 100%, 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 40rem;
+    display: grid;
+    grid-template: 1fr 1.5fr / repeat(2, 1fr);
+    margin: 2rem;
+    box-shadow: 0 10px 25px hsla(218, 22%, 67%, 60%);
+}
+
+.first {
+    grid-column: span 2;
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(218, 22%, 67%);
+    padding: 2.5rem;
+}
+
+.first h1 {
+    font-size: 1.5rem;
+    color: hsl(179, 62%, 43%);
+}
+
+.first h2 {
+    color: hsl(71, 73%, 54%);
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: hsl(179, 62%, 43%);
+    padding: 2.5rem;
+}
+
+.second a {
+    width: 100%;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: hsla(179, 62%, 43%, 80%);
+    padding: 2.5rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(0, 100%, 100%);
+    box-shadow: 0 10px 25px hsla(218, 22%, 0%, 20%);
+}
+
+.big {
+    font-size: 2rem;
+    margin-right: .8rem;
+}
+
+.lowopacity {
+    opacity: .6;
+}
+
+.third p, .second p {
+    opacity: .8;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template: 1.2fr 1fr 1fr / 1fr;
+    }
+
+    .first {
+        grid-column: span 1;
+    }
+}
